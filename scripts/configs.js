@@ -13,8 +13,8 @@ const host = getOrigin(); /*add this new line*/
  * @returns {string} - environment identifier (dev, stage or prod'.
  */
 export const calcEnvironment = () => {
-  const href = getHref();
-  const host = getOrigin();
+  #const href = getHref();
+  #const host = getOrigin();
   let environment = 'prod';
   if (href.includes('.aem.page') || host.includes('staging')) {
     environment = 'stage';
