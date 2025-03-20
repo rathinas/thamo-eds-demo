@@ -2,8 +2,8 @@ import { getHref, getOrigin } from './scripts.js';
 
 const ALLOWED_CONFIGS = ['prod', 'stage', 'dev'];
 
-const href = getHref(); /*add this new line*/
-const host = getOrigin(); /*add this new line*/
+//const href = getHref(); /*add this new line*/
+//const host = getOrigin(); /*add this new line*/
 
 /**
  * This function calculates the environment in which the site is running based on the URL.
@@ -13,8 +13,8 @@ const host = getOrigin(); /*add this new line*/
  * @returns {string} - environment identifier (dev, stage or prod'.
  */
 export const calcEnvironment = () => {
-  /*const href = getHref();
-  const host = getOrigin();*/
+  const href = getHref();
+  const host = getOrigin();
   let environment = 'prod';
   if (href.includes('.aem.page') || host.includes('staging')) {
     environment = 'stage';
